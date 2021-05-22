@@ -9,8 +9,8 @@ build: clean
 			GOOS=linux go build -o dist/func/$$dir github.com/sampado/aws-lambda-go-api/func/$$dir; \
 		done
 
-run:
-		aws-sam-local local start-api
+run: build
+		sam local start-api
 
 test:
 		go test ./... --cover

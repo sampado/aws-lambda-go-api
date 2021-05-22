@@ -7,7 +7,6 @@ import (
 )
 
 func handleRequest(req events.APIGatewayProxyRequest) (events.APIGatewayProxyResponse, error) {
-
 	return events.APIGatewayProxyResponse{
 		Body:       hello.HelloMessage("Basic Lambda"),
 		StatusCode: 200,
